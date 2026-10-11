@@ -1,0 +1,123 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e6f4ff 0%, #f0f9ff 100%); /* very light sky gradient */
+    color: #1a2a44;
+    line-height: 1.7;
+}
+.container {
+    max-width: 920px;
+    margin: 50px auto;
+    padding: 0 25px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+header {
+    background: #87CEEB; /* sky blue */
+    padding: 60px 30px 40px;
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+main {
+    padding: 35px 40px;
+}
+p {
+    margin-bottom: 1.3em;
+    font-size: 1.1em;
+}
+img.profile {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;               /* makes it perfectly circular */
+    border: 8px solid #87CEEB;        /* sky blue border */
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.4);
+    margin: 25px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+img.profile:hover {
+    transform: scale(1.08);
+}
+h2, h3 {
+    color: #1e90ff;                   /* deeper sky blue */
+    margin: 35px 0 18px;
+    font-weight: 600;
+}
+ul, ol {
+    margin: 20px 0 30px 35px;
+}
+li {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #87CEEB, transparent);
+    margin: 45px 0;
+}
+.nav-links {
+    text-align: center;
+    padding: 30px 0 40px;
+    background: #f0faff;
+    font-size: 1.15em;
+}
+.nav-links a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 22px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.nav-links a:hover {
+    background: #87CEEB;
+    color: white;
+}
+/* Movie grid layout */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin: 40px 0;
+}
+.movie-item {
+    background: #f8fdff;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e0f2ff;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.movie-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(135, 206, 235, 0.25);
+}
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.movie-item h3 {
+    margin: 12px 0 8px;
+    color: #1e90ff;
+}
+/* Make headings pop a bit more */
+main h1:first-child {
+    display: none; /* hide duplicate h1 if any – we use header h1 */
+}
